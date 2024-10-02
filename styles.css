@@ -3,6 +3,12 @@ body {
   padding-top: 0px;
 }
 
+.climange-logo{
+  width: 80px;
+  margin-top: 20px;
+}
+
+
 .hamburger {
   display: none;
 }
@@ -10,6 +16,8 @@ body {
 @media (max-width: 768px) {
   /* Styles for mobile devices */
   /* MOBILE */
+ 
+
   body {
     display: flex;
     flex-direction: column;
@@ -289,6 +297,9 @@ body {
   .our-prod-txt{
     margin-left: 50%;
     margin-top: 20px;
+  }
+  .cotton-bag-div{
+    margin-left: -45%;
   }
   /* Our location styles */
   .our-location-div {
@@ -799,8 +810,8 @@ body {
     border-radius: 40px;
     margin-left: 5%;
     margin-right: 5%;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .top-three-bags {
@@ -1171,10 +1182,10 @@ body {
     background-color: rgb(140, 182, 96);
     height: auto;
     border-radius: 40px;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-left: 200px;
-    padding-right: 200px;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+    padding-left: 100px;
+    padding-right: 100px;
     margin-top: 80px;
     margin-bottom: 150px;
   }
@@ -1182,6 +1193,7 @@ body {
   .top-three-bags {
     display: flex;
     justify-content: space-between;
+    gap: 90px;
   }
 
   .bag-1 {
