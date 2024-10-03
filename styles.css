@@ -272,7 +272,7 @@ body {
 
   /* OUR PRODUCTS */
   .button-33 {
-    margin-left:50%;
+    margin-left:35%;
     background-color: rgb(140, 182, 96);
     border-radius: 100px;
     box-shadow: rgba(140, 182, 96, 0.2) 0 -25px 18px -14px inset,
@@ -295,11 +295,8 @@ body {
     touch-action: manipulation;
   }
   .our-prod-txt{
-    margin-left: 50%;
+    margin-left: 35%;
     margin-top: 20px;
-  }
-  .cotton-bag-div{
-    margin-left: -45%;
   }
   .cotton-bag-img {
     display: none;
