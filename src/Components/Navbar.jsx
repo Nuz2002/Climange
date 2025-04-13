@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../images/climange-logo.png';
+import mobileLogo from "../images/climange-mobile-logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm">
+    <nav className="sticky top-0 z-50 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm py-3">
       <div className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
@@ -24,11 +25,20 @@ const Navbar = () => {
               className="group"
               onClick={() => setIsOpen(false)}
             >
+              {/* Mobile Logo */}
               <img
-                className="h-18 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-14 w-auto block md:hidden transition-transform duration-300"
+                src={mobileLogo}
+                alt="Climange Mobile Logo"
+              />
+
+              {/* Desktop Logo */}
+              <img
+                className="h-18 w-auto hidden md:block transition-transform duration-300 group-hover:scale-105"
                 src={logo}
                 alt="Climange Logo"
               />
+
             </Link>
           </div>
 
