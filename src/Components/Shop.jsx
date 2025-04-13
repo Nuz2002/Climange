@@ -80,7 +80,7 @@ const Shop = () => {
                   <img src={product.image} alt={product.name} className="w-full" />
                 </div>
                 <Link 
-                  to={`/shop/${product.slug}`} 
+                  to={'/contact'} 
                   className="shop-now-btn bg-green-700 text-white py-2 px-6 rounded-full flex items-center"
                 >
                   SHOP NOW
