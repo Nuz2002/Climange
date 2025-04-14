@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../images/climange-logo.png';
-import mobileLogo from "../images/climange-mobile-logo.png"
+import mobileLogo from "../images/climange-mobile-logo.svg"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 pt-10">
             <Link
               to="/"
               className="group"
@@ -27,19 +27,24 @@ const Navbar = () => {
             >
               {/* Mobile Logo */}
               <img
-                className="h-14 w-auto block md:hidden transition-transform duration-300"
+                className="h-14 w-auto block md:hidden transition-transform duration-300 -mt-8"
                 src={mobileLogo}
                 alt="Climange Mobile Logo"
               />
 
               {/* Desktop Logo */}
               <img
-                className="h-18 w-auto hidden md:block transition-transform duration-300 group-hover:scale-105"
+                className="logo-size w-auto hidden md:block transition-transform duration-300 group-hover:scale-105"
                 src={logo}
                 alt="Climange Logo"
               />
 
             </Link>
+          </div>
+
+          {/* Mobile brand text - Add this new section */}
+          <div className="flex md:hidden justify-center mt-2">
+            <span className="text-2xl font-bold text-green-900">CLIMANGE</span>
           </div>
 
           {/* Desktop navigation - centered and with more spacing on larger screens */}

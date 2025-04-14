@@ -1,32 +1,38 @@
 import whiteBag from "../images/simple-white-bag.png";
 import vegetablesBag from "../images/bag-with-vegetables.jpg";
 import zoomedBag from "../images/zoomed-bag.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div className="bg-white font-[Roboto]">
       {/* Hero Section */}
-      <section id="hero" className="w-full pt-12 pb-8 mt-10 mb-20">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-            <div className="md:w-1/2">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-black leading-snug">
-                High-quality, customisable, and eco-friendly bags tailored for businesses
-              </h1>
-              <p className="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
-                Customisable, sustainable bags for retailers, brands, and events that promote eco-friendly values.
-              </p>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <img
-                src={whiteBag}
-                alt="White tote bag with black handles"
-                className="w-full max-w-sm md:max-w-md"
-              />
+        <section id="hero" className="w-full pt-12 pb-8 mt-10 mb-20">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+              <div className="md:w-1/2">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-black leading-snug">
+                  High-quality, customisable, and eco-friendly bags tailored for businesses
+                </h1>
+                <p className="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+                  Customisable, sustainable bags for retailers, brands, and events that promote eco-friendly values.
+                </p>
+                <div className="flex justify-center md:justify-start">
+                  <Link to={"/contact"} className="bg-teal-800 hover:bg-teal-900 text-white font-bold py-3 px-6 rounded-full border-2 border-teal-800 transition duration-300">
+                    REQUEST YOUR QUOTE TODAY
+                  </Link>
+                </div>
+              </div>
+              <div className="md:w-1/2 flex justify-center">
+                <img
+                  src={whiteBag}
+                  alt="White tote bag with black handles"
+                  className="w-full max-w-sm md:max-w-md"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Testimonials */}
       <section id="testimonials" className="w-full py-20 border-y border-gray-200">
@@ -92,6 +98,14 @@ const Home = () => {
               </div>
             ))}
           </div>
+
+          {/* CTA Button - Centered at the end of the section */}
+        <div className="mt-16 flex justify-center">
+          <Link to="/contact" className="bg-teal-800 hover:bg-teal-900 text-white font-bold py-3 px-6 rounded-full border-2 border-teal-800 transition duration-300">
+            REQUEST YOUR QUOTE TODAY
+          </Link>
+        </div>
+        
         </div>
       </section>
 
@@ -131,6 +145,14 @@ const Home = () => {
               </div>
             ))}
           </div>
+
+           {/* CTA Button - Added and centered at the end of the section */}
+    <div className="mt-12 flex justify-center">
+      <Link to="/contact" className="bg-teal-800 hover:bg-teal-900 text-white font-bold py-3 px-6 rounded-full border-2 border-teal-800 transition duration-300">
+        REQUEST YOUR QUOTE TODAY
+      </Link>
+    </div>
+
         </div>
       </section>
 
@@ -205,6 +227,14 @@ const Home = () => {
             </div>
           ))}
         </div>
+
+         {/* CTA Button - Added and centered at the end of the section */}
+    <div className="mt-12 flex justify-center">
+      <Link to="/contact" className="bg-teal-800 hover:bg-teal-900 text-white font-bold py-3 px-6 rounded-full border-2 border-teal-800 transition duration-300">
+        REQUEST YOUR QUOTE TODAY
+      </Link>
+    </div>
+    
       </section>
     </div>
   );

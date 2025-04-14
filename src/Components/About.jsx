@@ -1,4 +1,5 @@
 import goodVibesImg from "../images/good-vibes-bag.jpg"
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -31,6 +32,12 @@ const About = () => {
             </div>
           </div>
         </div>
+         {/* CTA Button - Added and centered at the end of the section */}
+          <div className="mt-12 flex justify-center">
+            <Link to="/contact" className="bg-teal-800 hover:bg-teal-900 text-white font-bold py-3 px-6 rounded-full border-2 border-teal-800 transition duration-300">
+              REQUEST YOUR QUOTE TODAY
+            </Link>
+          </div>
       </div>
     </section>
   );
