@@ -27,7 +27,7 @@ const Navbar = () => {
             >
               {/* Mobile Logo */}
               <img
-                className="h-14 w-auto block md:hidden transition-transform duration-300 -mt-8"
+                className="h-12 w-auto block md:hidden transition-transform duration-300 -mt-8"
                 src={mobileLogo}
                 alt="Climange Mobile Logo"
               />
