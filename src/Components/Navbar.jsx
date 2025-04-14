@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import logo from '../images/climange-logo.png';
+import logo from '../images/climange-logo.svg';
 import mobileLogo from "../images/climange-mobile-logo.svg"
 
 const Navbar = () => {
@@ -15,26 +15,26 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm py-3">
+    <nav className="sticky top-0 z-50 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm py-4">
       <div className="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 pt-10">
+          <div className="flex-shrink-0 pt-5">
             <Link
               to="/"
               className="group"
               onClick={() => setIsOpen(false)}
             >
               {/* Mobile Logo */}
-              <img
+              {/* <img
                 className="h-12 w-auto block md:hidden transition-transform duration-300 -mt-8"
                 src={mobileLogo}
                 alt="Climange Mobile Logo"
-              />
+              /> */}
 
               {/* Desktop Logo */}
               <img
-                className="logo-size w-auto hidden md:block transition-transform duration-300 group-hover:scale-105"
+                className="logo-size w-auto transition-transform duration-300 group-hover:scale-105"
                 src={logo}
                 alt="Climange Logo"
               />
@@ -42,13 +42,13 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile brand text - Add this new section */}
-          <div className="flex md:hidden justify-center mt-2">
+          {/* Mobile brand text - between the hamburger and the logo */}
+          {/* <div className="flex md:hidden justify-center mt-2">
             <span className="text-2xl font-bold text-green-900">CLIMANGE</span>
-          </div>
+          </div> */}
 
           {/* Desktop navigation - centered and with more spacing on larger screens */}
-          <div className="hidden md:flex flex-1 justify-center items-center">
+          <div className="header-btns hidden md:flex flex-1 justify-center items-center">
             <div className="flex items-center space-x-4 lg:space-x-8 xl:space-x-12">
               {navLinks.map((link) => (
                 <Link
@@ -75,11 +75,12 @@ const Navbar = () => {
             className="md:hidden p-1.5 text-gray-700 dark:text-gray-300 hover:bg-gray-100/30 dark:hover:bg-gray-800/30 rounded-lg transition-colors"
           >
             <svg
-              className="w-6 h-6"
+              className="w-8 h-8 sm:w-9 sm:h-9"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
+
               {isOpen ? (
                 <path
                   strokeLinecap="round"
